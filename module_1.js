@@ -18,6 +18,11 @@ app.get("/",
   //res.send() respond with text
 );
 
+app.get("/health", 
+  (req, res)=> res.json(
+    {status: "OK"}
+  )
+)
 app.listen(port,
   ()=> console.log(`Server is listening om port ${port}`)
 );
